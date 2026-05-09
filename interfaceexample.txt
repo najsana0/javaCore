@@ -1,0 +1,151 @@
+sana
+task1
+public interface Animal {
+	void sound();
+	
+}
+class Dog implements Animal{
+	public void sound() {
+		System.out.println("Dog barks");
+	}
+	
+}
+class Cat implements Animal{
+	public void sound() {
+		System.out.println("Cat meows");	
+	}
+}
+public class Main {
+	public static void main(String[]args) {
+		Animal a=new Dog();
+		Animal a1=new Cat();
+	
+	a.sound();
+	a1.sound();
+	}
+
+} task2
+public interface Vehicle {
+	void start();
+	void stop();
+
+}
+class Car implements Vehicle{
+	public void start() {
+		System.out.println("car engine is starting");
+	
+	}
+	public void stop() {
+		System.out.println("car engine is stopped");
+	}
+}
+class Bike implements Vehicle{
+	public void start() {
+		System.out.println("Bike started");
+	
+	}
+	public void stop() {
+		System.out.println("Bike stopped");
+	}
+}
+public class Mainvehicle {
+	public static void main(String[]args) {
+		Vehicle v=new Car();
+		v.start();
+		v.stop();
+		Vehicle v1=new Bike();
+		v1.start();
+		v1.stop();
+	}
+
+}
+task3
+public interface Printable {
+	void print();
+}
+interface Showable{
+	void show();
+}
+class Document implements Printable,Showable {
+	public void print() {
+		System.out.println("printing document");
+}
+   public void show() {
+		System.out.println("showing document");
+}
+}
+public class Mainprint {
+	public static void main(String[]args) {
+		Document d=new Document();
+		d.print();
+		d.show();
+	}
+
+}task 4
+public interface Greetings {
+	void hello();
+	default void welcome() {
+		System.out.println("welcome This is my page");
+	}
+}
+class English implements Greetings{
+	public void hello() {
+		System.out.println("Hello This is my page");
+	}
+}
+public class Maingreetings {
+	public static void main(String[]args) {
+		Greetings g=new English();
+		g.hello();
+		g.welcome();
+	}
+
+}
+task 5
+public interface Shape {
+	void  draw();
+}
+class Rectangle implements Shape{
+	public void draw() {
+		System.out.println("Draw a Rectangle ");
+	}
+}
+class Triangle implements Shape{
+	public void draw() {
+		System.out.println("Draw a  Triangle  ");
+	}
+}
+class Circle implements Shape{
+	public void draw() {
+		System.out.println("Draw a Circle  ");
+	}
+}
+public class Mainshape {
+	public static void main(String[]args) {
+
+		Shape s=new Rectangle();
+		Shape s1=new Triangle();
+		Shape s2=new Circle();
+		
+		s.draw();
+		s1.draw();
+		s2.draw();
+	}
+
+}
+task6
+
+public interface Calculation {
+	static int add(int a,int b) {
+		return a+b;
+	}
+
+}
+public class Maincalculation {
+	public static void main(String[]args) {
+		int result=Calculation.add(10, 10);
+		System.out.println(result);
+	}
+
+}
+
